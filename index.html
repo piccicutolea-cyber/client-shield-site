@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CLIENT SHIELD is a practical workflow toolkit for freelancers who want clearer project scopes, better records and organized invoice follow-up.">
+<meta name="theme-color" content="#101a2b">
+<title>CLIENT SHIELD — Protect your work. Secure your payments.</title>
+<style>
+:root{--navy:#101a2b;--navy2:#192a42;--gold:#c8a66a;--cream:#f6f3ed;--ink:#202a38;--muted:#697586;--line:#e7e1d7;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{background:var(--navy);color:#fff;border-bottom:1px solid #ffffff18;position:sticky;top:0;z-index:5}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:16px;font-weight:850;letter-spacing:.17em;text-decoration:none}.brand span{color:var(--gold)}
+.navright{display:flex;align-items:center;gap:24px;font-size:13px;color:#d5dbe4}.navright a{text-decoration:none}.navright a:hover{color:var(--gold)}
+.lang{border:1px solid #ffffff55;background:transparent;color:white;border-radius:30px;padding:8px 13px;cursor:pointer;font:inherit}
+.hero{background:radial-gradient(circle at 85% 20%,#c8a66a20,transparent 27%),linear-gradient(125deg,var(--navy),var(--navy2));color:white;padding:94px 0 100px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:470px;height:470px;border:1px solid #c8a66a55;border-radius:50%;right:-120px;top:-190px;box-shadow:0 0 0 36px #c8a66a0c,0 0 0 76px #c8a66a08;pointer-events:none}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:850}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.01;letter-spacing:-.06em;max-width:790px;margin:18px 0 22px}
+.hero p{font-size:18px;color:#d4dbe5;max-width:650px;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:4px;text-decoration:none;font-weight:750;font-size:14px}
+.primary{background:var(--gold);color:#151d29}.secondary{border:1px solid #ffffff66;color:white}.primary:hover{background:#ddbd84}.secondary:hover{border-color:var(--gold)}
+.note{font-size:12px;color:#aeb9c8;margin-top:16px}
+.trustrow{display:flex;gap:24px;flex-wrap:wrap;margin-top:38px;color:#c4ccd7;font-size:12px;letter-spacing:.04em}.trustrow span:before{content:"✓";color:var(--gold);margin-right:8px}
+section{padding:78px 0}.sectionhead{max-width:700px;margin-bottom:36px}.sectionhead h2{font-size:clamp(30px,4vw,45px);line-height:1.1;letter-spacing:-.045em;margin:10px 0 14px;color:var(--navy)}.sectionhead p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);padding:25px;border-radius:8px;min-height:190px}.num{font-size:11px;color:#a7864f;font-weight:850;letter-spacing:.14em}.card h3{font-size:19px;margin:12px 0 8px;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:14px}
+.product{background:var(--navy);color:white}.productgrid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.product h2{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em;margin:12px 0 18px;color:white}.product p{color:#d0d8e2}.product ul{padding-left:20px;color:#e6eaf0}.product li{padding:5px 0}
+.preview{background:#f5f2eb;color:var(--navy);padding:34px;border-radius:8px;box-shadow:16px 18px 0 #c8a66a;max-width:470px}
+.preview .mini{font-size:10px;letter-spacing:.2em;color:#9b7a43;font-weight:850}.preview h3{font-size:31px;line-height:1.07;margin:15px 0}.preview p{color:#586273;font-size:13px}.previewline{height:1px;background:#d8d0c2;margin:20px 0}
+.pill{display:inline-block;border:1px solid #d9cfbd;border-radius:99px;padding:6px 10px;margin:4px 5px 0 0;font-size:10px;letter-spacing:.08em;color:#6c604d}
+.steps{counter-reset:step}.step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}.stepno{flex:0 0 38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#eee5d5;color:#8d6e3d;font-weight:850}.step h3{margin:0 0 5px;color:var(--navy);font-size:17px}.step p{margin:0;color:var(--muted);font-size:14px}
+.about{background:#eee9df}.aboutbox{max-width:820px}.aboutbox h2{font-size:clamp(30px,4vw,42px);line-height:1.1;letter-spacing:-.04em;color:var(--navy);margin:10px 0 16px}.aboutbox p{color:#596475}
+.faq{max-width:800px}.faqitem{padding:20px 0;border-bottom:1px solid var(--line)}.faqitem h3{font-size:17px;color:var(--navy);margin:0 0 7px}.faqitem p{margin:0;color:var(--muted);font-size:14px}
+.launch{background:#e9e2d5;padding:44px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:24px}.launch h2{margin:0 0 8px;color:var(--navy);font-size:28px;line-height:1.15}.launch p{margin:0;color:#5f6875;font-size:14px}.launch .status{white-space:nowrap;border:1px solid #c7b58f;padding:10px 14px;border-radius:4px;color:#735a30;font-size:12px;font-weight:800;letter-spacing:.08em}
+footer{background:#0b1320;color:#b6c0cd;padding:34px 0;font-size:12px}footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer strong{color:white;letter-spacing:.13em}
+[hidden]{display:none!important}
+@media(max-width:760px){.nav{padding:12px 0}.navright{gap:12px}.navright a{display:none}.hero{padding:68px 0}.grid{grid-template-columns:1fr}.productgrid{grid-template-columns:1fr;gap:38px}section{padding:58px 0}.preview{max-width:100%}.launch{padding:28px;align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top" aria-label="CLIENT SHIELD home">CLIENT <span>SHIELD</span></a>
+<nav class="navright" aria-label="Main navigation">
+<a href="#toolkit" data-fr="Le kit" data-en="The toolkit">The toolkit</a>
+<a href="#included" data-fr="Contenu" data-en="What's included">What's included</a>
+<a href="#about" data-fr="À propos" data-en="About">About</a>
+<a href="#faq">FAQ</a>
+<button class="lang" id="langBtn" type="button" aria-label="Switch language">FR</button>
+</nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap">
+<div class="eyebrow" data-fr="Le kit de gestion freelance" data-en="The freelancer workflow toolkit">The freelancer workflow toolkit</div>
+<h1 data-fr="Protège ton travail. Sécurise tes paiements." data-en="Protect your work. Secure your payments.">Protect your work. Secure your payments.</h1>
+<p data-fr="Un système pratique pour mieux cadrer tes missions, garder une trace des accords et suivre tes factures avec méthode." data-en="A practical system to define project scope, keep a clear record of agreements and follow up on invoices with structure.">A practical system to define project scope, keep a clear record of agreements and follow up on invoices with structure.</p>
+<div class="actions"><a class="btn primary" href="#toolkit" data-fr="Découvrir le kit" data-en="Explore the toolkit">Explore the toolkit</a><a class="btn secondary" href="#included" data-fr="Voir le contenu" data-en="See what's included">See what's included</a></div>
+<div class="note" data-fr="Outil indépendant d'organisation. Ne garantit ni paiement ni résultat commercial et ne remplace pas un conseil juridique ou comptable." data-en="Independent organizational toolkit. It does not guarantee payment or business results and is not a substitute for legal or accounting advice.">Independent organizational toolkit. It does not guarantee payment or business results and is not a substitute for legal or accounting advice.</div>
+<div class="trustrow"><span data-fr="Pensé pour les indépendants" data-en="Made for independent professionals">Made for independent professionals</span><span data-fr="Modèles faciles à adapter" data-en="Adaptable templates">Adaptable templates</span><span data-fr="Organisation claire" data-en="Clear workflows">Clear workflows</span></div>
+</div></div>
+
+<section id="toolkit"><div class="wrap">
+<div class="sectionhead"><div class="eyebrow" data-fr="Pourquoi CLIENT SHIELD" data-en="Why CLIENT SHIELD">Why CLIENT SHIELD</div><h2 data-fr="Moins de flou. Plus de méthode." data-en="Less uncertainty. More structure.">Less uncertainty. More structure.</h2><p data-fr="Les difficultés d'une mission commencent souvent avant le premier livrable : périmètre imprécis, accord non confirmé, facture oubliée ou relance repoussée." data-en="Project friction often starts before the first deliverable: unclear scope, undocumented agreements, forgotten invoices or delayed follow-ups.">Project friction often starts before the first deliverable: unclear scope, undocumented agreements, forgotten invoices or delayed follow-ups.</p></div>
+<div class="grid">
+<article class="card"><div class="num">01 / DEFINE</div><h3 data-fr="Clarifier la mission" data-en="Define the project">Define the project</h3><p data-fr="Pose les bases : livrables, délais, retours inclus et éléments à confirmer avant de commencer." data-en="Set expectations for deliverables, deadlines, included revisions and details to confirm before work begins.">Set expectations for deliverables, deadlines, included revisions and details to confirm before work begins.</p></article>
+<article class="card"><div class="num">02 / DOCUMENT</div><h3 data-fr="Garder une trace" data-en="Keep a clear record">Keep a clear record</h3><p data-fr="Utilise des modèles de confirmation et des checklists pour centraliser les informations utiles." data-en="Use confirmation templates and checklists to keep important project information in one place.">Use confirmation templates and checklists to keep important project information in one place.</p></article>
+<article class="card"><div class="num">03 / TRACK</div><h3 data-fr="Suivre les paiements" data-en="Track payments">Track payments</h3><p data-fr="Visualise les factures, les échéances et les prochaines actions dans un tableur structuré." data-en="See invoices, due dates and next actions in a structured tracking spreadsheet.">See invoices, due dates and next actions in a structured tracking spreadsheet.</p></article>
+</div></div></section>
+
+<section class="product" id="included"><div class="wrap productgrid">
+<div><div class="eyebrow" data-fr="Un kit, deux outils complémentaires" data-en="One toolkit, two complementary tools">One toolkit, two complementary tools</div>
+<h2 data-fr="Les essentiels pour organiser tes missions client." data-en="The essentials for better-organized client work.">The essentials for better-organized client work.</h2>
+<p data-fr="Conçu pour les freelances, consultants et professionnels indépendants qui travaillent avec des clients et veulent structurer leur quotidien." data-en="Designed for freelancers, consultants and independent professionals who work with clients and want a more consistent workflow.">Designed for freelancers, consultants and independent professionals who work with clients and want a more consistent workflow.</p>
+<ul>
+<li data-fr="Guide pratique de qualification et de cadrage client" data-en="Practical client qualification and project-scoping guide">Practical client qualification and project-scoping guide</li>
+<li data-fr="Modèle de confirmation du périmètre de mission" data-en="Project-scope confirmation template">Project-scope confirmation template</li>
+<li data-fr="Messages de relance à personnaliser" data-en="Payment reminder messages to customize">Payment reminder messages to customize</li>
+<li data-fr="Tableur de suivi des factures et échéances" data-en="Invoice and due-date tracking spreadsheet">Invoice and due-date tracking spreadsheet</li>
+<li data-fr="Routine hebdomadaire de suivi en 30 minutes" data-en="A 30-minute weekly review routine">A 30-minute weekly review routine</li>
+</ul>
+<div><span class="pill">PDF GUIDE</span><span class="pill">SPREADSHEET</span><span class="pill">EMAIL TEMPLATES</span><span class="pill">CHECKLISTS</span></div>
+</div>
+<div class="preview"><div class="mini">CLIENT SHIELD / FIELD GUIDE</div><h3 data-fr="Des processus clairs. Des décisions mieux documentées." data-en="Clear workflows. Better-documented decisions.">Clear workflows. Better-documented decisions.</h3><div class="previewline"></div><p data-fr="QUALIFIER · CONFIRMER · DOCUMENTER · SUIVRE" data-en="QUALIFY · CONFIRM · DOCUMENT · TRACK">QUALIFY · CONFIRM · DOCUMENT · TRACK</p><div class="previewline"></div><p data-fr="Guide pratique + tableur de suivi<br>Conçu pour les indépendants" data-en="Practical guide + invoice tracker<br>Built for independent professionals">Practical guide + invoice tracker<br>Built for independent professionals</p></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sectionhead"><div class="eyebrow" data-fr="Comment ça fonctionne" data-en="How it works">How it works</div><h2 data-fr="Une méthode simple à intégrer à ta semaine." data-en="A simple system to build into your week.">A simple system to build into your week.</h2></div>
+<div class="steps">
+<div class="step"><div class="stepno">1</div><div><h3 data-fr="Avant d'accepter une mission" data-en="Before accepting a project">Before accepting a project</h3><p data-fr="Vérifie les informations essentielles, les attentes et les éventuels points à éclaircir." data-en="Review essential information, expectations and anything that needs clarification.">Review essential information, expectations and anything that needs clarification.</p></div></div>
+<div class="step"><div class="stepno">2</div><div><h3 data-fr="Avant de commencer" data-en="Before work begins">Before work begins</h3><p data-fr="Confirme par écrit le périmètre, les délais et les modalités convenues." data-en="Confirm the agreed scope, timeline and working arrangements in writing.">Confirm the agreed scope, timeline and working arrangements in writing.</p></div></div>
+<div class="step"><div class="stepno">3</div><div><h3 data-fr="Chaque semaine" data-en="Every week">Every week</h3><p data-fr="Mets à jour les factures, repère les échéances et planifie les prochaines actions." data-en="Update invoices, review due dates and plan the next follow-up actions.">Update invoices, review due dates and plan the next follow-up actions.</p></div></div>
+</div></div></section>
+
+<section class="about" id="about"><div class="wrap aboutbox">
+<div class="eyebrow" data-fr="À propos" data-en="About CLIENT SHIELD">About CLIENT SHIELD</div>
+<h2 data-fr="Un projet indépendant, construit autour d'un besoin concret." data-en="An independent project built around a practical need.">An independent project built around a practical need.</h2>
+<p data-fr="CLIENT SHIELD part d'une idée simple : une meilleure organisation ne règle pas tous les problèmes, mais elle aide à réduire les oublis, à clarifier les attentes et à prendre des décisions plus structurées. Le kit rassemble des outils opérationnels conçus pour être adaptés à chaque activité." data-en="CLIENT SHIELD is built on a simple idea: better organization cannot solve every problem, but it can help reduce oversights, clarify expectations and support more structured decisions. The toolkit brings together practical resources that can be adapted to different services and workflows.">CLIENT SHIELD is built on a simple idea: better organization cannot solve every problem, but it can help reduce oversights, clarify expectations and support more structured decisions. The toolkit brings together practical resources that can be adapted to different services and workflows.</p>
+</div></section>
+
+<section id="faq"><div class="wrap faq">
+<div class="sectionhead"><div class="eyebrow">FAQ</div><h2 data-fr="À savoir avant de commencer." data-en="A few things to know.">A few things to know.</h2></div>
+<div class="faqitem"><h3 data-fr="CLIENT SHIELD garantit-il le paiement des factures ?" data-en="Does CLIENT SHIELD guarantee invoice payment?">Does CLIENT SHIELD guarantee invoice payment?</h3><p data-fr="Non. Le kit aide à organiser les missions et le suivi des factures. Il ne garantit ni paiement ni résultat commercial." data-en="No. The toolkit helps organize projects and invoice follow-up. It does not guarantee payment or business results.">No. The toolkit helps organize projects and invoice follow-up. It does not guarantee payment or business results.</p></div>
+<div class="faqitem"><h3 data-fr="Est-ce un document juridique ?" data-en="Is this a legal document?">Is this a legal document?</h3><p data-fr="Non. Les modèles sont des supports organisationnels à adapter. Les règles varient selon le pays : consulte un professionnel pour toute question juridique ou fiscale." data-en="No. The templates are organizational aids to adapt. Rules vary by country: consult a qualified professional for legal or tax questions.">No. The templates are organizational aids to adapt. Rules vary by country: consult a qualified professional for legal or tax questions.</p></div>
+<div class="faqitem"><h3 data-fr="Le kit est-il disponible maintenant ?" data-en="Can I buy the toolkit now?">Can I buy the toolkit now?</h3><p data-fr="La boutique n'est pas encore ouverte. Cette page présente le projet et ne collecte aucun paiement ni aucune donnée de commande." data-en="The shop is not open yet. This page introduces the project and does not collect payments or order information.">The shop is not open yet. This page introduces the project and does not collect payments or order information.</p></div>
+</div></section>
+
+<section><div class="wrap"><div class="launch">
+<div><h2 data-fr="CLIENT SHIELD arrive bientôt." data-en="CLIENT SHIELD is coming soon.">CLIENT SHIELD is coming soon.</h2><p data-fr="La boutique et le paiement seront ajoutés après vérification des conditions de vente et de gestion du compte." data-en="The shop and checkout will be added once seller-account and payment requirements have been properly arranged.">The shop and checkout will be added once seller-account and payment requirements have been properly arranged.</p></div>
+<div class="status" data-fr="OUVERTURE EN PRÉPARATION" data-en="LAUNCH IN PREPARATION">LAUNCH IN PREPARATION</div>
+</div></div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>CLIENT SHIELD</strong><br>Protect your work. Secure your payments.</div><div data-fr="© CLIENT SHIELD · Outil indépendant d'organisation freelance" data-en="© CLIENT SHIELD · Independent freelancer workflow toolkit">© CLIENT SHIELD · Independent freelancer workflow toolkit</div><div data-fr="Aucune vente ni collecte de paiement sur cette page." data-en="No sales or payment collection on this page.">No sales or payment collection on this page.</div></div></footer>
+<script>
+const btn=document.getElementById('langBtn');let lang='en';
+btn.addEventListener('click',()=>{lang=lang==='en'?'fr':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-fr]').forEach(el=>{el.textContent=el.getAttribute('data-'+lang)});btn.textContent=lang==='en'?'FR':'EN';});
+</script>
+</body></html>
